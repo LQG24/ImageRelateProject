@@ -25,4 +25,14 @@
       android:background="@color/colorPrimary"
       />
 
+  <TextView
+      android:layout_width="match_parent"
+      android:gravity="center"
+      android:layout_height="100dp"
+      android:text="LabelLayout"
+      android:clickable="true"
+      android:onClick="onLabelLayout"
+      android:background="@color/colorPrimary"
+      />
+
 </LinearLayout>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ff282729"
+    tools:context="com.lqg.Image.LabelActivity">
+
+    <com.google.android.flexbox.FlexboxLayout
+        android:id="@+id/selected_flex_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        app:alignItems="center"
+        app:flexDirection="row"
+        app:flexWrap="wrap"
+        app:justifyContent="flex_start"
+        app:layout_constraintTop_toTopOf="parent"
+        app:showDivider="beginning|middle">
+
+        <!--<EditText-->
+        <!--android:id="@+id/add_label_et"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="@null"-->
+        <!--android:hint="输入关键词"-->
+        <!--app:layout_alignSelf="flex_end" />-->
+
+    </com.google.android.flexbox.FlexboxLayout>
+
+    <View
+        android:id="@+id/line_view"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:background="@color/share_line_bg_color"
+        app:layout_constraintTop_toBottomOf="@+id/selected_flex_layout" />
+
+    <TextView
+        android:id="@+id/label_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:text="推荐关键词"
+        android:textColor="@color/normal_text_color"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line_view" />
+
+    <com.google.android.flexbox.FlexboxLayout
+        android:id="@+id/unselected_flex_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        app:alignItems="center"
+        app:flexDirection="row"
+        app:flexWrap="wrap"
+        app:justifyContent="flex_start"
+        app:layout_constraintTop_toBottomOf="@+id/label_title"
+        app:showDivider="beginning|middle">
+
+    </com.google.android.flexbox.FlexboxLayout>
+
+</android.support.constraint.ConstraintLayout>

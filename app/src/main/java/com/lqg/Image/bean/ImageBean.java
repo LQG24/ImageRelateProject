@@ -1,4 +1,4 @@
-package com.lqg.Image;
+package com.lqg.Image.bean;
 
 /**
  * Created by Administrator on 2019/7/28.

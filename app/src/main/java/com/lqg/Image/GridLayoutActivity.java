@@ -8,6 +8,8 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 
+import com.lqg.Image.bean.ImageBean;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;

@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.lqg.Image.bean.LabelBean;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -20,5 +22,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void onFlexLayout(View view){
         startActivity(new Intent(MainActivity.this,FlexboxActivity.class));
+    }
+
+    public void onLabelLayout(View view){
+        startActivity(new Intent(MainActivity.this, LabelActivity.class));
     }
 }

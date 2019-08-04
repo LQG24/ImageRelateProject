@@ -9,6 +9,7 @@ import com.google.android.flexbox.AlignItems;
 import com.google.android.flexbox.FlexDirection;
 import com.google.android.flexbox.FlexboxLayoutManager;
 import com.google.android.flexbox.JustifyContent;
+import com.lqg.Image.bean.ImageBean;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -60,6 +61,5 @@ public class FlexboxActivity extends AppCompatActivity {
         mFlexBoxAdapter = new FlexBoxAdapter(FlexboxActivity.this,mImageBeanList);
         gallleryRecyclerView.setAdapter(mFlexBoxAdapter);
         gallleryRecyclerView.setHasFixedSize(false);
-
     }
 }

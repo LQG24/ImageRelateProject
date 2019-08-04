@@ -17,7 +17,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".GridLayoutActivity" />
-        <activity android:name=".FlexboxActivity"></activity>
+        <activity android:name=".FlexboxActivity" />
+        <activity android:name=".LabelActivity"></activity>
     </application>
 
 </manifest>
