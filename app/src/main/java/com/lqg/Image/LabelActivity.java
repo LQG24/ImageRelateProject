@@ -1,7 +1,7 @@
 package com.lqg.Image;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,14 +11,13 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.google.android.flexbox.FlexboxLayout;
-import com.lqg.Image.bean.LabelBean;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 public class LabelActivity extends AppCompatActivity {
-    private List<String> labelData = new ArrayList(Arrays.asList("放松", "体育", "运动", "健身", "篮球", "足球", "乒乓球", "橄榄球"));
+    private List<String> labelData = new ArrayList(Arrays.asList("十年爱情长跑", "羡慕", "嫉妒", "柠檬酸", "祝福", "长长久久", "早生贵子", "幸福美满"));
     private List<String> selectLabelData = new ArrayList();
     private FlexboxLayout unSelectedFlexLayout ;
     private FlexboxLayout selectedFlexLayout;
@@ -41,7 +40,7 @@ public class LabelActivity extends AppCompatActivity {
     private void initLabelData() {
         unSelectedFlexLayout.removeAllViews();
         for (int i = 0; i < labelData.size(); i++) {
-            TextView textView = ScreenUtils.createFlexItemView(LabelActivity.this,  labelData.get(i), false, false);
+            TextView textView = ScreenUtils.createFlexItemView(LabelActivity.this,  labelData.get(i), false);
             textView.setLayoutParams(ScreenUtils.createDefaultLayoutParams());
             unSelectedFlexLayout.addView(textView);
             final int finalI = i;
@@ -58,18 +57,16 @@ public class LabelActivity extends AppCompatActivity {
     }
 
     private void initselectLabelData() {
-        if(selectLabelData.size() <= 0){
-            return;
-        }
         selectedFlexLayout.removeAllViews();
         for (int i = 0; i < selectLabelData.size(); i++) {
-            TextView textView = ScreenUtils.createFlexItemView(LabelActivity.this,  selectLabelData.get(i), true, false);
+            TextView textView = ScreenUtils.createFlexItemView(LabelActivity.this,  selectLabelData.get(i), true);
             final int finalI = i;
             textView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    labelData.add(selectLabelData.get(finalI));
-                    selectLabelData.remove(selectLabelData.get(finalI));
+                    String content = selectLabelData.get(finalI);
+                    labelData.add(content);
+                    selectLabelData.remove(content);
                     initselectLabelData();
                     initLabelData();
                 }
