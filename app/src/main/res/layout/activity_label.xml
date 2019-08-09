@@ -21,14 +21,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:showDivider="beginning|middle">
 
-        <!--<EditText-->
-        <!--android:id="@+id/add_label_et"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:background="@null"-->
-        <!--android:hint="输入关键词"-->
-        <!--app:layout_alignSelf="flex_end" />-->
-
     </com.google.android.flexbox.FlexboxLayout>
 
     <View

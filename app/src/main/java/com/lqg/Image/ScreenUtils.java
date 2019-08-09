@@ -53,7 +53,12 @@ public class ScreenUtils {
         return point.y;
     }
 
-    public static TextView createFlexItemView(Context context, String content, boolean selected, boolean addItem) {
+    /**
+     * @param content  内容
+     * @param selected 是否被选中
+     *
+     */
+    public static TextView createFlexItemView(Context context, String content, boolean selected) {
         TextView textView = new TextView(context);
         textView.setTextSize(12);
         textView.setPadding(30, 10, 30, 10);
@@ -67,11 +72,11 @@ public class ScreenUtils {
             textView.setBackgroundResource(R.drawable.corner_13_light_black_bg);
         }
 
-        if (addItem) {
-            textView.setText("+ " + content);
-            textView.setTextColor(context.getResources().getColor(R.color.btn_presss_text));
-            textView.setBackgroundResource(R.drawable.corner_13_stroke_bg);
-        }
+//        if (addItem) {
+//            textView.setText("+ " + content);
+//            textView.setTextColor(context.getResources().getColor(R.color.btn_presss_text));
+//            textView.setBackgroundResource(R.drawable.corner_13_stroke_bg);
+//        }
         textView.setClickable(true);
         textView.setGravity(Gravity.CENTER);
         return textView;
